@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hand Skeleton Mirror</title>
+<style>
+  :root { --bg:#0e1116; --panel:#161b22; --line:#2a313b; --fg:#e6e9ef; --dim:#8b95a5; --acc:#f2c94c; --ok:#3fd18a; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--fg); font:14px/1.4 system-ui, "Segoe UI", Tahoma, sans-serif; overflow:hidden; }
+  #app { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto 1fr; height:100%; }
+  header { grid-column:1/3; display:flex; align-items:center; gap:14px; padding:8px 14px; border-bottom:1px solid var(--line); background:var(--panel); }
+  header h1 { font-size:16px; margin:0 12px 0 0; font-weight:600; letter-spacing:.3px; }
+  header label { display:flex; align-items:center; gap:6px; color:var(--dim); cursor:pointer; user-select:none; }
+  header button { background:#222a35; color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:5px 10px; cursor:pointer; }
+  header button:hover { border-color:var(--acc); }
+  #status { margin-left:auto; color:var(--dim); }
+  #status.ok { color:var(--ok); }
+  .pane { position:relative; min-width:0; min-height:0; }
+  #cam { border-right:1px solid var(--line); background:#000; display:flex; align-items:center; justify-content:center; }
+  #video { display:none; }
+  #overlay { width:100%; height:100%; object-fit:contain; }
+  #view { background:radial-gradient(ellipse at 50% 40%, #1b2230 0%, #0e1116 70%); }
+  #three { width:100%; height:100%; display:block; }
+  .tag { position:absolute; top:8px; left:10px; font-size:12px; color:var(--dim); letter-spacing:.5px; text-transform:uppercase; pointer-events:none; }
+  #hud { position:absolute; right:10px; bottom:10px; background:rgba(14,17,22,.78); border:1px solid var(--line); border-radius:8px; padding:8px 10px; font:12px/1.5 ui-monospace, Consolas, monospace; color:var(--fg); min-width:200px; pointer-events:none; }
+  #hud table { border-collapse:collapse; }
+  #hud th { color:var(--dim); font-weight:normal; text-align:right; padding:0 6px; }
+  #hud td { text-align:right; padding:0 6px; }
+  #hud td.f { text-align:left; color:var(--acc); }
+  #msg { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; color:var(--dim); padding:20px; pointer-events:none; }
+  #msg:empty { display:none; }
+  @media (max-width: 900px) { #app { grid-template-columns:1fr; grid-template-rows:auto 1fr 1fr; } header { grid-column:1; } #cam { border-right:0; border-bottom:1px solid var(--line); } }
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>Hand Skeleton Mirror</h1>
+    <button id="btnCam">เปิดกล้อง</button>
+    <button id="btnDemo">โหมดสาธิต</button>
+    <label><input type="checkbox" id="chkForearm" checked> แสดงแขนท่อนล่าง</label>
+    <label><input type="checkbox" id="chkMirrorPalm"> สลับด้านฝ่ามือ</label>
+    <label><input type="checkbox" id="chkLandmarks" checked> วาดจุดบนวิดีโอ</label>
+    <label>ความนุ่มนวล <input type="range" id="rngSmooth" min="0.05" max="0.9" step="0.05" value="0.35"></label>
+    <span id="status">กำลังโหลด…</span>
+  </header>
+  <div class="pane" id="cam">
+    <span class="tag">Webcam · MediaPipe Hands</span>
+    <video id="video" playsinline muted></video>
+    <canvas id="overlay" width="1280" height="720"></canvas>
+    <div id="msg">กด “เปิดกล้อง” แล้วยกมือขวาให้กล้องเห็นทั้งฝ่ามือ</div>
+  </div>
+  <div class="pane" id="view">
+    <span class="tag">Hand Skeleton · ×2.6 real size · right hand</span>
+    <canvas id="three"></canvas>
+    <div id="hud"></div>
+  </div>
+</div>
+
+<script src="hands.js"></script>
+<script type="importmap">
+{ "imports": { "three": "./three.module.min.js", "three/addons/loaders/GLTFLoader.js": "./GLTFLoader.js", "three/addons/controls/OrbitControls.js": "./OrbitControls.js" } }
+</script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

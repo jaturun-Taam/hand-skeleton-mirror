@@ -1,0 +1,391 @@
+{
+ "units": "mm",
+ "up": [
+  0,
+  0,
+  1
+ ],
+ "palmNormal": [
+  0,
+  1,
+  0
+ ],
+ "forearm": [
+  "Radius",
+  "Ulna"
+ ],
+ "carpals": [
+  "Carpal_01",
+  "Carpal_02",
+  "Carpal_03",
+  "Carpal_04",
+  "Carpal_05",
+  "Carpal_06"
+ ],
+ "wrist": [
+  -71.543,
+  -1.674,
+  -51.211
+ ],
+ "fingers": {
+  "Thumb": {
+   "chain": [
+    "Thumb_Metacarpal",
+    "Thumb_Proximal_Phalanx",
+    "Thumb_Distal_Phalanx"
+   ],
+   "joints": [
+    {
+     "name": "CMC",
+     "bone": "Thumb_Metacarpal",
+     "pivot": [
+      -48.485,
+      -0.192,
+      -30.347
+     ],
+     "axis": [
+      0.4071,
+      0.0027,
+      0.9134
+     ],
+     "length": 46.47
+    },
+    {
+     "name": "MCP",
+     "bone": "Thumb_Proximal_Phalanx",
+     "pivot": [
+      -31.261,
+      -0.162,
+      8.562
+     ],
+     "axis": [
+      0.144,
+      0.0088,
+      0.9895
+     ],
+     "length": 29.73
+    },
+    {
+     "name": "IP",
+     "bone": "Thumb_Distal_Phalanx",
+     "pivot": [
+      -26.902,
+      -0.03,
+      36.765
+     ],
+     "axis": [
+      -0.0597,
+      -0.0021,
+      0.9982
+     ],
+     "length": 22.39
+    }
+   ],
+   "tip": [
+    -28.206,
+    -0.015,
+    57.461
+   ]
+  },
+  "Index": {
+   "chain": [
+    "Index_Metacarpal",
+    "Index_Proximal_Phalanx",
+    "Index_Middle_Phalanx",
+    "Index_Distal_Phalanx"
+   ],
+   "joints": [
+    {
+     "name": "CMC",
+     "bone": "Index_Metacarpal",
+     "pivot": [
+      -59.731,
+      -0.331,
+      -24.151
+     ],
+     "axis": [
+      0.1302,
+      0.0001,
+      0.9915
+     ],
+     "length": 69.37
+    },
+    {
+     "name": "MCP",
+     "bone": "Index_Proximal_Phalanx",
+     "pivot": [
+      -51.625,
+      -0.119,
+      38.55
+     ],
+     "axis": [
+      0.1055,
+      0.0044,
+      0.9944
+     ],
+     "length": 38.75
+    },
+    {
+     "name": "PIP",
+     "bone": "Index_Middle_Phalanx",
+     "pivot": [
+      -47.86,
+      0.054,
+      75.587
+     ],
+     "axis": [
+      0.0676,
+      -0.0021,
+      0.9977
+     ],
+     "length": 24.43
+    },
+    {
+     "name": "DIP",
+     "bone": "Index_Distal_Phalanx",
+     "pivot": [
+      -45.977,
+      -0.0,
+      98.642
+     ],
+     "axis": [
+      0.0755,
+      -0.0014,
+      0.9971
+     ],
+     "length": 14.99
+    }
+   ],
+   "tip": [
+    -44.747,
+    0.033,
+    112.323
+   ]
+  },
+  "Middle": {
+   "chain": [
+    "Middle_Metacarpal",
+    "Middle_Proximal_Phalanx",
+    "Middle_Middle_Phalanx",
+    "Middle_Distal_Phalanx"
+   ],
+   "joints": [
+    {
+     "name": "CMC",
+     "bone": "Middle_Metacarpal",
+     "pivot": [
+      -70.811,
+      -0.003,
+      -23.862
+     ],
+     "axis": [
+      -0.0355,
+      0.0011,
+      0.9994
+     ],
+     "length": 67.56
+    },
+    {
+     "name": "MCP",
+     "bone": "Middle_Proximal_Phalanx",
+     "pivot": [
+      -73.104,
+      0.068,
+      38.63
+     ],
+     "axis": [
+      -0.0016,
+      0.0047,
+      1.0
+     ],
+     "length": 42.08
+    },
+    {
+     "name": "PIP",
+     "bone": "Middle_Middle_Phalanx",
+     "pivot": [
+      -73.292,
+      0.047,
+      78.951
+     ],
+     "axis": [
+      -0.0135,
+      -0.002,
+      0.9999
+     ],
+     "length": 29.29
+    },
+    {
+     "name": "DIP",
+     "bone": "Middle_Distal_Phalanx",
+     "pivot": [
+      -73.472,
+      0.033,
+      106.982
+     ],
+     "axis": [
+      0.0057,
+      -0.0034,
+      1.0
+     ],
+     "length": 14.99
+    }
+   ],
+   "tip": [
+    -73.326,
+    0.032,
+    120.837
+   ]
+  },
+  "Ring": {
+   "chain": [
+    "Ring_Metacarpal",
+    "Ring_Proximal_Phalanx",
+    "Ring_Middle_Phalanx",
+    "Ring_Distal_Phalanx"
+   ],
+   "joints": [
+    {
+     "name": "CMC",
+     "bone": "Ring_Metacarpal",
+     "pivot": [
+      -85.206,
+      -0.333,
+      -24.648
+     ],
+     "axis": [
+      -0.1366,
+      0.0002,
+      0.9906
+     ],
+     "length": 69.37
+    },
+    {
+     "name": "MCP",
+     "bone": "Ring_Proximal_Phalanx",
+     "pivot": [
+      -94.124,
+      -0.112,
+      38.421
+     ],
+     "axis": [
+      -0.0973,
+      0.0046,
+      0.9952
+     ],
+     "length": 38.75
+    },
+    {
+     "name": "PIP",
+     "bone": "Ring_Middle_Phalanx",
+     "pivot": [
+      -98.373,
+      0.054,
+      76.188
+     ],
+     "axis": [
+      -0.0889,
+      -0.0012,
+      0.996
+     ],
+     "length": 24.43
+    },
+    {
+     "name": "DIP",
+     "bone": "Ring_Distal_Phalanx",
+     "pivot": [
+      -100.643,
+      0.013,
+      99.598
+     ],
+     "axis": [
+      -0.0743,
+      0.0003,
+      0.9972
+     ],
+     "length": 14.99
+    }
+   ],
+   "tip": [
+    -101.725,
+    0.033,
+    113.398
+   ]
+  },
+  "Little": {
+   "chain": [
+    "Little_Metacarpal",
+    "Little_Proximal_Phalanx",
+    "Little_Middle_Phalanx",
+    "Little_Distal_Phalanx"
+   ],
+   "joints": [
+    {
+     "name": "CMC",
+     "bone": "Little_Metacarpal",
+     "pivot": [
+      -97.425,
+      0.101,
+      -25.594
+     ],
+     "axis": [
+      -0.3608,
+      -0.0014,
+      0.9326
+     ],
+     "length": 54.66
+    },
+    {
+     "name": "MCP",
+     "bone": "Little_Proximal_Phalanx",
+     "pivot": [
+      -115.298,
+      -0.023,
+      21.634
+     ],
+     "axis": [
+      -0.1751,
+      0.0018,
+      0.9845
+     ],
+     "length": 33.57
+    },
+    {
+     "name": "PIP",
+     "bone": "Little_Middle_Phalanx",
+     "pivot": [
+      -121.064,
+      -0.052,
+      54.111
+     ],
+     "axis": [
+      -0.1341,
+      0.0001,
+      0.991
+     ],
+     "length": 20.24
+    },
+    {
+     "name": "DIP",
+     "bone": "Little_Distal_Phalanx",
+     "pivot": [
+      -123.537,
+      -0.051,
+      74.03
+     ],
+     "axis": [
+      -0.0509,
+      0.0009,
+      0.9987
+     ],
+     "length": 15.02
+    }
+   ],
+   "tip": [
+    -124.143,
+    0.005,
+    88.022
+   ]
+  }
+ }
+}
